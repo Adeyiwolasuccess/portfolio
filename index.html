@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portfolio of Success Adeyiwola: data scientist and backend engineer with finance and EdTech experience."><meta property="og:title" content="Success Adeyiwola — Data Scientist"><meta property="og:description" content="Data scientist and backend engineer with finance and EdTech experience. Projects, live demo and experience."><meta name="theme-color" content="#f7ead3">
+<title>Success Adeyiwola — Data Scientist</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7ead3;--ink:#3b2616;--mute:#6c523a;--card:rgba(247,234,211,.7);--line:rgba(59,38,22,.2);--acc:#b5501d;--acc2:#d8a22a;--tree:#9a7a43;--leaf1:#c8692b;--leaf2:#e0a53a;--leaf3:#8f8a3c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c130d;--ink:#f6e7cf;--mute:#b99e7e;--card:rgba(40,27,18,.7);--line:rgba(246,231,207,.18);--acc:#ee8a45;--acc2:#f0c45e;--tree:#4a3420;--leaf1:#f2a65a;--leaf2:#e8c06a;--leaf3:#c8692b}}
+:root[data-theme="dark"]{--bg:#1c130d;--ink:#f6e7cf;--mute:#b99e7e;--card:rgba(40,27,18,.7);--line:rgba(246,231,207,.18);--acc:#ee8a45;--acc2:#f0c45e;--tree:#4a3420;--leaf1:#f2a65a;--leaf2:#e8c06a;--leaf3:#c8692b}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 'Fraunces',Georgia,serif;transition:background .4s,color .4s}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+#forest{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+#fx{position:fixed;inset:0;z-index:5;pointer-events:none}
+#dot{position:fixed;width:18px;height:18px;margin:-9px 0 0 -9px;border:2px solid var(--acc);border-radius:50%;z-index:6;pointer-events:none;opacity:0;transition:opacity .2s,transform .15s}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;gap:1.2rem;align-items:center;width:max-content;max-width:94%;margin:12px auto 0;padding:.55rem 1.2rem;background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:99px}
+nav a{color:var(--ink);text-decoration:none;opacity:.8}nav a:hover{color:var(--acc);opacity:1}
+nav button{background:none;border:1px solid var(--line);color:var(--ink);border-radius:99px;padding:.15rem .6rem;cursor:pointer;font:inherit}
+main{position:relative;z-index:2;max-width:980px;margin:0 auto;padding:0 22px 160px}
+section{padding:28px 0 8px}
+h1{font-size:clamp(2.6rem,8vw,5.2rem);line-height:1.02;margin:.3em 0;font-weight:600;letter-spacing:-.02em}
+h1 em{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic;font-weight:400}
+h2{font-size:1.9rem;margin:.2em 0 .8em;font-weight:600}
+p{max-width:62ch}.mute{color:var(--mute)}
+.hero{padding-top:90px}#work{padding-top:72px}
+.btn{display:inline-block;margin:.4rem .6rem 0 0;padding:.6rem 1.1rem;border-radius:99px;border:1px solid var(--acc);color:var(--ink);text-decoration:none}
+.btn.p{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#2a1608;border-color:transparent}
+.grid{display:grid;gap:30px 44px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.card{position:relative;padding:34px 0 8px}.card::before{content:'';position:absolute;top:10px;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--acc),var(--acc2) 40%,transparent 90%);border-radius:2px}.card::after{content:'';position:absolute;top:2px;left:0;width:16px;height:16px;background:var(--acc);border-radius:0 100% 0 100%;transform:rotate(-8deg)}
+.card h3{margin:.1em 0 .4em;font-size:1.25rem}
+.stat{display:flex;gap:1.4rem;flex-wrap:wrap;margin:.8rem 0}
+.stat b{display:block;font-size:1.5rem;color:var(--acc)}
+.tag{display:inline-block;margin:.15rem .25rem .15rem 0;padding:.1rem .6rem;border:1px solid var(--line);border-radius:99px;font-size:.8rem}
+a.l{color:var(--acc)}
+details{margin-top:.6rem}summary{cursor:pointer;color:var(--acc)}
+.job ul{padding-left:1.1rem;margin:.4rem 0}.job li{margin:.35rem 0;max-width:62ch}.job{border-left:2px solid var(--acc);padding-left:18px}
+#work .grid{grid-template-columns:1fr;counter-reset:n;gap:34px}#work .card{counter-increment:n;padding-left:104px}#work .card h3::before{content:counter(n,decimal-leading-zero);position:absolute;left:0;top:26px;font-size:4rem;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--acc)}
+.vine{display:block;width:100%;height:40px;margin-top:56px;overflow:visible}.vine path{fill:none;stroke:var(--acc);stroke-width:2;stroke-linecap:round;opacity:.7}.vine .lf{fill:var(--acc2);stroke:none;opacity:.9}
+footer{position:relative;z-index:2;text-align:center;padding:0 0 28px}
+
+#vines{position:fixed;inset:0;z-index:1;pointer-events:none}
+.vp{fill:none;stroke:var(--acc);stroke-width:3;stroke-linecap:round;opacity:.8}
+.vl{transform:scale(0);transform-origin:0 50%;transform-box:fill-box;opacity:.9;transition:transform .7s cubic-bezier(.3,1.6,.5,1)}.vl.on{transform:scale(1)}
+.sw{transform-origin:600px 700px;animation:sway 7s ease-in-out infinite alternate}.s2{transform-origin:1130px 0;animation-duration:9s}
+@keyframes sway{from{transform:rotate(-.5deg)}to{transform:rotate(.6deg)}}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}.rv.in{opacity:1;transform:none}
+.loader{display:flex;align-items:center;flex-wrap:wrap;gap:6px 14px;margin:.3rem 0 .7rem}
+.pct{font:500 2.1rem 'JetBrains Mono',monospace;color:var(--acc);min-width:5.4ch}
+.leaves{display:inline-flex;gap:2px}.lv svg{display:block;transition:transform .45s cubic-bezier(.3,1.6,.5,1)}
+.lv path{fill:transparent;stroke:var(--acc);stroke-width:1.5;transition:fill .4s}
+.lv.on path{fill:var(--acc2)}.lv.on svg{transform:scale(1.18) rotate(-8deg)}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.sw{animation:none}}
+
+.hero{position:relative}#net{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.chart{margin:.9rem 0 .5rem;max-width:520px}.chart h4{margin:.7rem 0 .3rem;font:500 .72rem 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}
+.crow{display:grid;grid-template-columns:112px 1fr 46px;gap:10px;align-items:center;font-size:.85rem;margin:.28rem 0}
+.bar{height:14px}.bar i{display:block;height:100%;width:0;border-radius:3px 14px 3px 14px;background:linear-gradient(90deg,var(--acc),var(--acc2));transition:width 1.4s cubic-bezier(.2,.8,.2,1) .6s}
+.crow.base .bar i{background:var(--mute);opacity:.55}.card.in .bar i{width:var(--w)}
+.crow b{font:500 .8rem 'JetBrains Mono',monospace;color:var(--acc)}.crow.base b{color:var(--mute)}
+
+#skills .grid{grid-template-columns:1fr;position:relative;padding-left:58px;gap:26px}
+#skills .grid::before{content:'';position:absolute;left:18px;top:30px;bottom:30px;width:3px;border-radius:2px;background:linear-gradient(var(--acc),var(--acc2));transform:scaleY(0);transform-origin:top;transition:transform 2.2s ease}
+#skills .grid.in::before{transform:scaleY(1)}
+#skills .card::before{left:-40px;right:auto;width:40px;top:20px}#skills .card::after{left:-48px;top:12px}
+#skills .tag{opacity:0;transform:scale(.3) rotate(-12deg)}
+#skills .card.in .tag{opacity:1;transform:none;transition:opacity .5s,transform .6s cubic-bezier(.3,1.6,.5,1);transition-delay:calc(var(--i,0)*55ms + .5s)}
+.job{border-left:none!important;position:relative;padding:0 0 30px 50px}
+.job::before{content:'';position:absolute;left:0;top:4px;width:30px;height:30px;border-radius:50%;background:repeating-radial-gradient(circle,var(--acc) 0 2px,transparent 2px 5px);transform:scale(0);transition:transform .8s cubic-bezier(.3,1.6,.5,1)}
+.job::after{content:'';position:absolute;left:14px;top:38px;bottom:0;width:2px;background:linear-gradient(var(--acc),var(--acc2));transform:scaleY(0);transform-origin:top;transition:transform 1s ease .4s}
+.job.in::before{transform:scale(1)}.job.in::after{transform:scaleY(1)}#exp .job:last-of-type::after{display:none}
+
+.grow{display:flex;flex-wrap:wrap;gap:12px;margin-top:.4rem}
+.pill{display:flex;align-items:center;gap:10px;padding:.5rem 1rem;border:1px solid var(--line);border-radius:99px}
+.pill i{width:9px;height:9px;border-radius:50%;background:var(--acc2);animation:pulse 2.4s ease-in-out infinite}.pill:nth-child(2) i{animation-delay:.6s}.pill:nth-child(3) i{animation-delay:1.2s}.pill:nth-child(4) i{animation-delay:1.8s}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 var(--acc2);transform:scale(1)}50%{box-shadow:0 0 0 7px transparent;transform:scale(1.25)}}
+
+@media (hover:hover){
+nav a{background:linear-gradient(var(--acc),var(--acc)) 0 100%/0 2px no-repeat;padding-bottom:2px;transition:background-size .3s,color .3s}nav a:hover{background-size:100% 2px}
+.btn{transition:transform .3s,box-shadow .3s}.btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px -10px var(--acc)}
+.pill{transition:transform .3s,box-shadow .3s,border-color .3s}.pill:hover{transform:translateY(-4px);border-color:var(--acc);box-shadow:0 10px 24px -12px var(--acc)}
+.tag{transition:background .25s,color .25s}.tag:hover{background:var(--acc2);color:#2a1608}
+#skills .card.in .tag:hover{transform:translateY(-3px) rotate(-4deg);transition-delay:0s}
+.card::after{transition:transform .5s cubic-bezier(.3,1.6,.5,1)}.card:hover::after{transform:rotate(40deg) scale(1.35)}
+#work .card h3::before{transition:color .4s,transform .5s cubic-bezier(.3,1.6,.5,1)}#work .card:hover h3::before{color:var(--acc);transform:scale(1.08) rotate(-4deg)}
+.crow .bar i{transition:width 1.4s cubic-bezier(.2,.8,.2,1) .6s,filter .3s}.crow:hover .bar i{filter:brightness(1.2) saturate(1.2)}
+.job.in:hover::before{transform:scale(1.18) rotate(90deg)}
+a.l{transition:letter-spacing .3s}a.l:hover{letter-spacing:.04em}
+}
+
+#domain .card p{margin:.2rem 0 .4rem}.sub{font-size:1.3rem;color:var(--acc);margin:.1rem 0 1rem;font-weight:600}
+@media (max-width:700px){#vines{display:none}}
+@media (max-width:560px){#work .card{padding-left:0}#work .card h3::before{position:static;display:block;font-size:2.6rem;margin-bottom:.2rem}#skills .grid{padding-left:34px}#skills .grid::before{left:10px}#skills .card::before{left:-24px;width:24px}#skills .card::after{left:-32px}.job{padding-left:42px}}
+@media (max-width:560px){nav{gap:.7rem;padding:.5rem .8rem}}
+</style>
+</head>
+<body>
+<svg id="forest" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+<defs>
+<g id="pine"><rect x="-5" y="0" width="10" height="60"/><path d="M0-190 L-62 -60 H-30 L-86 40 H86 L30 -60 H62Z"/></g>
+<g id="oak"><rect x="-8" y="-20" width="16" height="90"/><circle cx="0" cy="-70" r="62"/><circle cx="-48" cy="-40" r="42"/><circle cx="48" cy="-40" r="42"/><circle cx="0" cy="-118" r="40"/></g>
+</defs>
+<g fill="var(--tree)">
+<g opacity=".16" transform="translate(0,-30)"><use href="#pine" x="40" y="520" transform="scale(1.5)" style="transform-box:fill-box"/><use href="#oak" x="330" y="520" transform="scale(1.8)"/><use href="#pine" x="560" y="520" transform="scale(1.7)"/><use href="#oak" x="790" y="520" transform="scale(1.7)"/><use href="#pine" x="500" y="520" transform="scale(1.5)"/></g>
+<g class="sw" opacity=".28"><use href="#pine" x="60" y="640"/><use href="#oak" x="190" y="650"/><use href="#pine" x="320" y="640" transform="translate(0,0)"/><use href="#pine" x="470" y="645"/><use href="#oak" x="620" y="650"/><use href="#pine" x="770" y="640"/><use href="#oak" x="910" y="650"/><use href="#pine" x="1050" y="640"/><use href="#oak" x="1160" y="650"/></g>
+<g class="sw s2" opacity=".5" stroke="var(--tree)"><path d="M1130 0 C1110 160 1160 300 1120 460" stroke-width="14" fill="none"/><path d="M1124 120 C1070 130 1040 90 1010 100 M1128 250 C1070 230 1040 250 1000 220 M1118 380 C1070 370 1050 400 1010 390" stroke-width="6" fill="none"/></g>
+<g opacity=".4"><circle cx="1010" cy="100" r="14"/><circle cx="1000" cy="220" r="16"/><circle cx="1010" cy="390" r="13"/><circle cx="1060" cy="180" r="11"/><circle cx="1050" cy="310" r="12"/></g>
+</g>
+</svg>
+<svg id="vines" aria-hidden="true"></svg><canvas id="fx"></canvas><div id="dot"></div>
+
+<nav class="mono"><a href="#domain">Focus</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#exp">Experience</a><a href="#contact">Contact</a><button id="theme" aria-label="Toggle theme">◐</button></nav>
+
+<main>
+<section class="hero">
+<canvas id="net"></canvas>
+<span class="mono mute">Lagos, Nigeria · Data Scientist | Software Engineer</span>
+<h1>Data that <em>grows</em><br>from solid roots.</h1>
+<p class="sub">Data scientist &amp; backend engineer with finance and EdTech experience.</p>
+<p>I'm Success Adeyiwola, a data-driven software engineer and emerging data scientist. I lead a team of six engineers at Next and previously ran finance for Abba House of Grace, so I read data the way decision-makers do: as budgets, behavior and risk. My toolkit is Python, SQL and scikit-learn, with models that are evaluated honestly and deployed.</p>
+<a class="btn p" href="#work">See projects</a><a class="btn" href="https://diabetes-risk-predictor-ap.streamlit.app/" target="_blank" rel="noopener">Live demo</a><a class="btn" href="https://github.com/Adeyiwolasuccess" target="_blank" rel="noopener">GitHub</a><a class="btn" href="https://www.linkedin.com/in/success-adeyiwola-83750a3ab" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://docs.google.com/document/d/1kBFq5T6sHoP3fLIjFv9QP5YDk0LdVYoF/edit?usp=drive_link" target="_blank" rel="noopener">View CV</a>
+<p class="mono mute" style="margin-top:2rem">↳ Click and drag anywhere — leaves follow your cursor.</p>
+</section>
+
+<section id="domain"><span class="mono mute">01 — Focus</span><h2>Where I apply data</h2>
+<p>My background sits in two places where numbers drive decisions: running an organization's finances and building an education platform.</p>
+<div class="grid">
+<div class="card"><h3>Finance</h3><p>Head of Finance at Abba House of Grace: budgeting, income and expenditure tracking, cash flow monitoring and financial reporting for management decisions. My banking customer churn capstone (10,000+ records) applies the same instinct to data.</p></div>
+<div class="card"><h3>EdTech</h3><p>Technical Lead at Next, building a platform for Nigerian high school students, using SQL to surface usage patterns that drive product and content decisions.</p></div>
+</div></section>
+<svg class="vine" viewBox="0 0 900 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 C150 -6 260 46 450 20 S760 -6 900 20"/><path class="lf" d="M300 30 q10 -22 28 -14 q-6 18 -28 14z"/><path class="lf" d="M600 12 q12 18 30 8 q-8 -18 -30 -8z"/></svg>
+<section id="work"><span class="mono mute">02 — Selected work</span><h2>Projects</h2>
+<div class="grid">
+<div class="card"><span class="mono mute">Deployed ML web app</span><h3>Diabetes Risk Predictor</h3>
+<p>Pima Indians Diabetes dataset, cleaned with leakage-safe custom scikit-learn pipelines. Compared Logistic Regression and Random Forest, then tuned the Random Forest.</p>
+<div class="loader" data-to="88"><span class="pct">0%</span><span class="leaves"></span><span class="lbl mono mute">accuracy · diabetic class</span></div>
+<div class="stat"><span><b>0.83</b>F1 (diabetic)</span><span><b>88%</b>accuracy (diabetic class)</span></div>
+<span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Streamlit</span><br>
+<a class="l" href="https://diabetes-risk-predictor-ap.streamlit.app/" target="_blank" rel="noopener">Live demo →</a> &nbsp;·&nbsp; <a class="l" href="https://github.com/Adeyiwolasuccess/diabetes-risk-predictor" target="_blank" rel="noopener">View repo →</a></div>
+
+<div class="card"><span class="mono mute">Capstone + MLOps</span><h3>Banking Customer Churn</h3>
+<p>SQL-based EDA on 10,000+ records, feature engineering and K-Means segmentation (6 segments via elbow and silhouette), then a comparison of four classifiers (Logistic Regression, Decision Tree, Random Forest, KNN) against a dummy baseline with 5-fold cross-validation.</p><p>I then rebuilt the notebook as a deployable service: a modular Python package managed with uv, a fit/apply preprocessing split saved alongside the model, and a Random Forest served through a FastAPI <code>/predict</code> endpoint. On two test profiles it gave an 11% churn probability for a low-risk customer and 90% for a high-risk one, matching the cluster found earlier. Docker and CI/CD are next.</p><details><summary>Honest checks</summary><p class="mute">The Random Forest's AUC of 0.989 looked almost too good, so I retrained it without its two strongest features (transaction amount and count). AUC fell to 0.918 and F1 to 0.664: a real but moderate drop, not a collapse. I also dropped two leftover Naive Bayes columns that came with the source data.</p></details>
+<div class="loader" data-to="96.1"><span class="pct">0%</span><span class="leaves"></span><span class="lbl mono mute">accuracy · random forest</span></div>
+<div class="stat"><span><b>0.871</b>F1</span><span><b>0.989</b>ROC AUC</span><span><b>0.822</b>recall</span></div>
+<div class="chart" data-g="5-fold CV F1 vs dummy baseline|Dummy baseline,.164,b|Logistic Reg.,.699,|KNN,.694,|Decision Tree,.805,|Random Forest,.883,&#10;ROC AUC (test split)|Logistic Reg.,.931,|KNN,.911,|Decision Tree,.892,|Random Forest,.989,"></div>
+<span class="tag">SQL</span><span class="tag">K-Means</span><span class="tag">Random Forest</span><span class="tag">FastAPI</span><span class="tag">uv</span><br>
+<a class="l" href="https://github.com/Adeyiwolasuccess/churn-mlops" target="_blank" rel="noopener">View repo →</a></div>
+
+<div class="card"><span class="mono mute">Internship project · Codveda</span><h3>Social Media Sentiment (NLP)</h3>
+<p>Turned 191 fine-grained emotion labels into 3 polarity classes by reading the actual posts, then compared TF-IDF models against a majority baseline on 732 posts.</p>
+<div class="loader" data-to="86"><span class="pct">0%</span><span class="leaves"></span><span class="lbl mono mute">accuracy · sentiment</span></div>
+<div class="stat"><span><b>84–86%</b>accuracy</span><span><b>~0.65</b>macro F1</span><span><b>0.27</b>baseline F1</span></div>
+<div class="chart" data-g="Macro F1 vs baseline|Majority baseline,.268,b|Logistic Reg.,.64,|Naive Bayes,.66,&#10;Neutral class F1 (weakest)|Logistic Reg.,.14,|Naive Bayes,.21,"></div>
+<span class="tag">NLTK</span><span class="tag">TF-IDF</span><span class="tag">Naive Bayes</span>
+<details><summary>Honest limitations</summary><p class="mute">Neutral is barely learned (F1 0.14–0.21, only 8 test posts). Near-duplicate posts may inflate scores slightly. I report this rather than hide it, because macro F1 is the fairer metric on imbalanced data.</p></details></div>
+</div></section>
+
+<svg class="vine" viewBox="0 0 900 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 C150 -6 260 46 450 20 S760 -6 900 20"/><path class="lf" d="M300 30 q10 -22 28 -14 q-6 18 -28 14z"/><path class="lf" d="M600 12 q12 18 30 8 q-8 -18 -30 -8z"/></svg><section id="skills"><span class="mono mute">03 — Toolkit</span><h2>Skills</h2>
+<div class="grid"><div class="card"><h3>Data science &amp; machine learning</h3><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">scikit-learn</span><span class="tag">Exploratory Data Analysis</span><span class="tag">Statistical Analysis</span><span class="tag">Hypothesis Testing</span><span class="tag">Logistic Regression</span><span class="tag">Random Forests</span><span class="tag">Model Evaluation (Accuracy, RMSE, Confusion Matrix)</span><span class="tag">Feature Engineering</span></div><div class="card"><h3>Software engineering</h3><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Django</span><span class="tag">MySQL</span><span class="tag">RESTful API Design</span><span class="tag">Agile / Sprint Delivery</span><span class="tag">Git</span></div><div class="card"><h3>Tools &amp; platforms</h3><span class="tag">SQL</span><span class="tag">Jupyter Notebooks</span><span class="tag">Streamlit</span><span class="tag">Google Colab</span><span class="tag">Jira</span><span class="tag">GitHub</span></div><div class="card"><h3>Core strengths</h3><span class="tag">Team Leadership</span><span class="tag">Cross-functional Collaboration</span><span class="tag">Problem-solving</span><span class="tag">Technical Documentation</span><span class="tag">Budgeting &amp; Financial Reporting</span></div></div></section>
+
+<svg class="vine" viewBox="0 0 900 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 C150 -6 260 46 450 20 S760 -6 900 20"/><path class="lf" d="M300 30 q10 -22 28 -14 q-6 18 -28 14z"/><path class="lf" d="M600 12 q12 18 30 8 q-8 -18 -30 -8z"/></svg><section id="exp"><span class="mono mute">04 — Background</span><h2>Experience</h2>
+<div class="job"><h3>Technical Lead — Next <span class="mute">· 2025 – Present</span></h3>
+<ul><li>Lead a team of six developers building and maintaining an EdTech platform delivering learning resources to Nigerian high school students.</li><li>Analyze user and platform data with SQL to surface usage patterns, driving product and content decisions.</li><li>Drive sprint planning and code review, delivering platform features consistently on schedule.</li><li>Architected backend systems in Python, FastAPI, Django and MySQL that power the platform's core learning content and user data.</li><li>Diagnose and resolve production issues through root cause analysis, strengthening stability and reliability.</li></ul></div>
+<div class="job"><h3>Data Science Intern — Codveda Technologies <span class="mute">· 2026</span></h3>
+<ul><li>Take part in data analysis, statistical modeling and machine learning projects, extracting insights from complex datasets.</li><li>Built an NLP sentiment classifier on 732 social media posts: grouped 191 emotion labels into 3 polarity classes, then compared TF-IDF models with Logistic Regression and Complement Naive Bayes, reaching 84–86% accuracy against a 67% baseline.</li></ul></div>
+<div class="job"><h3>Head of Finance — Abba House of Grace <span class="mute">· 2023 – 2026</span></h3>
+<p class="mute" style="margin:.1rem 0 0">A Christian virtual community</p><ul><li>Managed financial operations, including budgeting, income and expenditure tracking, and day-to-day financial administration.</li><li>Maintained accurate records and monitored transactions to ensure accountability and proper use of funds.</li><li>Prepared and reviewed financial reports to support management decision-making and give visibility into the organization's financial position.</li><li>Monitored cash flow, payments and obligations so expenses were planned and controlled, and supported budgeting by analyzing income, expenses and available resources.</li><li>Worked with leadership to provide financial guidance and support responsible resource allocation.</li></ul></div>
+<div class="job"><h3>Training &amp; education</h3><ul><li>TS Academy: 12-module data science curriculum (Python, statistics, machine learning, SQL, deployment).</li><li>ALX Backend Web Development Program.</li><li>ALX Professional Foundations (Apr 2025) and ALX AI Starter Kit (Jul 2025).</li><li>B.Sc. Computer Science (in progress), University of the People.</li></ul></div>
+</section>
+
+<svg class="vine" viewBox="0 0 900 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 C150 -6 260 46 450 20 S760 -6 900 20"/><path class="lf" d="M300 30 q10 -22 28 -14 q-6 18 -28 14z"/><path class="lf" d="M600 12 q12 18 30 8 q-8 -18 -30 -8z"/></svg><section id="growing"><span class="mono mute">05 — Next up</span><h2>Currently growing</h2>
+<p class="mute">What I'm learning to take my models from notebooks to production.</p>
+<div class="grow"><span class="pill"><i></i>FastAPI + Docker · serving models as APIs</span><span class="pill"><i></i>MLflow · experiment tracking</span><span class="pill"><i></i>LLM basics · embeddings &amp; RAG</span><span class="pill"><i></i>Experimentation · A/B testing &amp; causal inference</span></div>
+</section>
+<svg class="vine" viewBox="0 0 900 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 C150 -6 260 46 450 20 S760 -6 900 20"/><path class="lf" d="M300 30 q10 -22 28 -14 q-6 18 -28 14z"/><path class="lf" d="M600 12 q12 18 30 8 q-8 -18 -30 -8z"/></svg>
+<section id="contact"><span class="mono mute">06 — Say hello</span><h2>Contact</h2>
+<p>Open to data science roles and collaborations, particularly where finance or education meets data.</p>
+<a class="btn p" href="mailto:adeyiwolasuccess@gmail.com">adeyiwolasuccess@gmail.com</a><a class="btn" href="https://docs.google.com/document/d/1kBFq5T6sHoP3fLIjFv9QP5YDk0LdVYoF/edit?usp=drive_link" target="_blank" rel="noopener">View CV</a><a class="btn" href="https://github.com/Adeyiwolasuccess" target="_blank" rel="noopener">GitHub</a><a class="btn" href="https://www.linkedin.com/in/success-adeyiwola-83750a3ab" target="_blank" rel="noopener">LinkedIn</a>
+</section>
+</main>
+<footer class="mono mute">© 2026 Success Adeyiwola · Lagos, Nigeria</footer>
+
+<script>
+(function(){
+var root=document.documentElement,btn=document.getElementById('theme');
+try{var s=localStorage.getItem('theme');if(s)root.setAttribute('data-theme',s)}catch(e){}
+btn.onclick=function(){var dark=root.getAttribute('data-theme')?root.getAttribute('data-theme')==='dark':matchMedia('(prefers-color-scheme:dark)').matches;var n=dark?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}};
+var c=document.getElementById('fx'),x=c.getContext('2d'),dot=document.getElementById('dot'),P=[],drag=false,lx=0,ly=0;
+function size(){c.width=innerWidth;c.height=innerHeight}size();addEventListener('resize',size);
+function col(n){return getComputedStyle(root).getPropertyValue(n).trim()}
+function leaf(px,py,a){P.push({d:a?.0016:.012,max:a?.55:1,x:px,y:py,vx:(Math.random()-.5)*1.6,vy:Math.random()*.8+.3,r:Math.random()*6.3,vr:(Math.random()-.5)*.2,s:Math.random()*7+6,life:1,c:['--leaf1','--leaf2','--leaf3'][Math.floor(Math.random()*3)]})}
+addEventListener('pointerdown',function(e){if(e.pointerType==='touch')return;drag=true;lx=e.clientX;ly=e.clientY;dot.style.opacity=1;dot.style.transform='scale(1.4)'});
+addEventListener('pointerup',function(){drag=false;dot.style.opacity=0;dot.style.transform='scale(1)'});
+addEventListener('pointermove',function(e){dot.style.left=e.clientX+'px';dot.style.top=e.clientY+'px';
+if(!drag)return;var d=Math.hypot(e.clientX-lx,e.clientY-ly);if(d>14){leaf(e.clientX,e.clientY);lx=e.clientX;ly=e.clientY}});
+function tick(){x.clearRect(0,0,c.width,c.height);if(Math.random()<.04)leaf(Math.random()*c.width,-10,1);
+for(var i=P.length-1;i>=0;i--){var p=P[i];p.x+=p.vx+Math.sin(p.y/25)*.5;p.y+=p.vy;p.r+=p.vr;p.life-=p.d;if(p.life<=0){P.splice(i,1);continue}
+x.save();x.translate(p.x,p.y);x.rotate(p.r);x.globalAlpha=p.life*p.max;x.fillStyle=col(p.c);
+x.beginPath();x.ellipse(0,0,p.s,p.s/2.2,0,0,6.283);x.fill();
+x.strokeStyle=col('--bg');x.lineWidth=1;x.beginPath();x.moveTo(-p.s,0);x.lineTo(p.s,0);x.stroke();x.restore()}
+requestAnimationFrame(tick)}tick();
+
+var vs=document.getElementById('vines'),V=[],NS='http://www.w3.org/2000/svg',intro=0;
+function el(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e}
+function mk(fn,n){var d='';for(var i=0;i<=n;i++){var p=fn(i/n);d+=(i?'L':'M')+p[0].toFixed(1)+','+p[1].toFixed(1)}
+var path=el('path',{d:d,'class':'vp'});vs.appendChild(path);var L=path.getTotalLength();path.style.strokeDasharray=L;path.style.strokeDashoffset=L;
+var lv=[],cnt=Math.floor(L/58);
+for(var k=1;k<=cnt;k++){var l=k*L/(cnt+1),a=path.getPointAtLength(l),b=path.getPointAtLength(l+2),ang=Math.atan2(b.y-a.y,b.x-a.x)*180/Math.PI+(k%2?-55:55);
+var g=el('g',{transform:'translate('+a.x+','+a.y+') rotate('+ang+')'}),lf=el('path',{d:'M0 0 q9 -16 26 -7 q-9 16 -26 7z','class':'vl'});
+lf.style.fill='var(--leaf'+(k%3+1)+')';g.appendChild(lf);vs.appendChild(g);lv.push({e:lf,t:k/(cnt+1)})}
+V.push({p:path,L:L,lv:lv})}
+function build(){vs.innerHTML='';V=[];if(innerWidth<700)return;var W=innerWidth,H=innerHeight;vs.setAttribute('width',W);vs.setAttribute('height',H);
+mk(function(t){var y=H-t*H;return[16+9*Math.sin(y/65),y]},Math.ceil(H/12));
+mk(function(t){var y=H-t*H;return[W-16-9*Math.sin(y/65+2),y]},Math.ceil(H/12));
+mk(function(t){var x=t*W;return[x,14+7*Math.sin(x/70)]},Math.ceil(W/14));draw()}
+function draw(){var h=document.documentElement,sc=scrollY/Math.max(1,h.scrollHeight-innerHeight),p=Math.min(1,intro*.35+sc*.65);
+V.forEach(function(v){v.p.style.strokeDashoffset=v.L*(1-p);v.lv.forEach(function(l){l.e.classList.toggle('on',l.t<=p)})})}
+build();addEventListener('resize',build);addEventListener('scroll',draw,{passive:true});
+var t0=performance.now();(function f(n){intro=Math.min(1,(n-t0)/2200);draw();if(intro<1)requestAnimationFrame(f)})(t0);
+document.querySelectorAll('.loader').forEach(function(e){var w=e.querySelector('.leaves');for(var i=0;i<10;i++){var sp=document.createElement('span');sp.className='lv';sp.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 21C3 9 11 3 21 3C21 13 15 21 3 21Z"/></svg>';w.appendChild(sp)}});
+function run(e){var to=parseFloat(e.dataset.to),dec=to%1?1:0,pc=e.querySelector('.pct'),ls=e.querySelectorAll('.lv'),s0=performance.now();
+(function f(n){var k=Math.min(1,(n-s0)/2200),v=to*(1-Math.pow(1-k,3)),lit=Math.round(v/10);pc.textContent=v.toFixed(dec)+'%';
+ls.forEach(function(l,i){l.classList.toggle('on',i<lit)});if(k<1)requestAnimationFrame(f)})(s0)}
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;en.target.classList.add('in');
+var ld=en.target.querySelector('.loader');if(ld&&!ld.dataset.done){ld.dataset.done=1;setTimeout(function(){run(ld)},450)}io.unobserve(en.target)})},{threshold:.15});
+document.querySelectorAll('#skills .card').forEach(function(c){c.querySelectorAll('.tag').forEach(function(t,i){t.style.setProperty('--i',i)})});
+document.querySelectorAll('.hero>*,h2,.card,.job,#skills .grid,.grow,#contact p,#contact .btn').forEach(function(e,i){e.classList.add('rv');if(e.parentNode.className==='hero')e.style.transitionDelay=(i*.12)+'s';io.observe(e)});
+
+document.querySelectorAll('.chart').forEach(function(c){var h='';c.dataset.g.split('\n').forEach(function(g){var p=g.split('|');h+='<h4>'+p[0]+'</h4>';p.slice(1).forEach(function(r){var a=r.split(','),v=parseFloat(a[1]);
+h+='<div class="crow'+(a[2]==='b'?' base':'')+'"><span>'+a[0]+'</span><div class="bar" style="--w:'+(v*100)+'%"><i></i></div><b>'+v.toFixed(v>.9?3:2)+'</b></div>'})});c.innerHTML=h});
+var nc=document.getElementById('net'),nx=nc.getContext('2d'),N=[],mx=-999,my=-999,hero=document.querySelector('.hero');
+function nsize(){var r=hero.getBoundingClientRect();nc.width=r.width;nc.height=r.height;N=[];var n=Math.min(innerWidth<700?35:90,Math.round(r.width*r.height/9500));
+for(var i=0;i<n;i++)N.push({x:Math.random()*r.width,y:Math.random()*r.height,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,c:'--leaf'+(i%3+1),r:2.5+Math.random()*2.5,a:Math.random()*6})}
+nsize();setTimeout(nsize,700);addEventListener('load',nsize);addEventListener('resize',nsize);
+addEventListener('pointermove',function(e){var r=nc.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top});
+function ntick(){var w=nc.width,h=nc.height;if(nc.getBoundingClientRect().bottom<0){requestAnimationFrame(ntick);return}nx.clearRect(0,0,w,h);var ac=col('--acc'),cl=[col('--leaf1'),col('--leaf2'),col('--leaf3')];
+N.forEach(function(n){var dx=mx-n.x,dy=my-n.y,d=Math.hypot(dx,dy);if(d<170&&d>1){n.x+=dx*.006;n.y+=dy*.006}
+n.x+=n.vx;n.y+=n.vy;if(n.x<0||n.x>w)n.vx*=-1;if(n.y<0||n.y>h)n.vy*=-1;n.d=d});
+nx.lineWidth=1;nx.strokeStyle=ac;
+for(var i=0;i<N.length;i++){for(var j=i+1;j<N.length;j++){var d=Math.hypot(N[i].x-N[j].x,N[i].y-N[j].y);if(d<115){nx.globalAlpha=(1-d/115)*.38;nx.beginPath();nx.moveTo(N[i].x,N[i].y);nx.lineTo(N[j].x,N[j].y);nx.stroke()}}
+if(N[i].d<160){nx.globalAlpha=(1-N[i].d/160)*.75;nx.beginPath();nx.moveTo(N[i].x,N[i].y);nx.lineTo(mx,my);nx.stroke()}}
+N.forEach(function(n){var near=n.d<160?1+(1-n.d/160)*1.2:1;nx.globalAlpha=.8;nx.fillStyle=cl[+n.c.slice(-1)-1];nx.save();nx.translate(n.x,n.y);nx.rotate(n.a);nx.beginPath();nx.ellipse(0,0,n.r*1.7*near,n.r*near,0,0,6.283);nx.fill();nx.restore()});
+nx.globalAlpha=1;requestAnimationFrame(ntick)}ntick();
+
+document.querySelectorAll('.btn,.pill').forEach(function(e){var last=0;e.addEventListener('pointerenter',function(ev){var now=Date.now();if(ev.pointerType==='touch'||now-last<1500)return;last=now;var r=e.getBoundingClientRect();leaf(r.left+Math.random()*r.width,r.top+r.height/2)})});
+})();
+</script>
+</body>
+</html>
